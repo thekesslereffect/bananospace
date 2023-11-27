@@ -1,3 +1,4 @@
+import React from "react";
 import EmptyProjectCard from '../components/EmptyProjectCard'
 import HeroText from '../components/HeroText'
 import ProjectCard from '../components/ProjectCard'
@@ -7,7 +8,7 @@ import { useContractRead, useContract, useAddress } from "@thirdweb-dev/react";
 
 const contractAddress = bananoSpaceContract;
 
-const projects = () => {
+const Projects = () => {
     const address = useAddress();
     const { contract } = useContract(contractAddress);
     // Read contract with arguments
@@ -55,4 +56,4 @@ const projects = () => {
   
 }
 
-export default projects
+export default Projects
