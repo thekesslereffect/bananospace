@@ -1,7 +1,7 @@
 import Button from "../components/Button";
 import Hero2Text from "../components/Hero2Text";
 import HeroText from "../components/HeroText";
-import { bananoSpaceContract, wrappedBananoContract } from "../utils";
+import { bananoSpaceContract, githubProject, wrappedBananoContract } from "../utils";
 
 const About = () => {
     return (
@@ -9,11 +9,16 @@ const About = () => {
             <HeroText title={"about."} description={"Don't Trust. Verify."} />
 
             
-
-
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-lg">
-                <div className="text-3xl font-extrabold">contracts.sol</div>
+                <div className="text-3xl font-extrabold">sources</div>
       
+                    <a
+                        href={githubProject}
+                        target="_blank"
+                    >
+                        <Button label={"Github"} />
+                    </a>
+       
                     <a
                         href={`https://polygonscan.com/address/${bananoSpaceContract}#code`}
                         target="_blank"

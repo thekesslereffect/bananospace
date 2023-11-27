@@ -1,5 +1,6 @@
 import { ethers } from 'ethers';
 
+export const githubProject = "https://github.com/thekesslereffect/bananospace";
 export const bananoSpaceContract = "0xb7398a6910C2A642479aE85D9Fe7FE117DfA39E8" ;
 export const wrappedBananoContract = "0xe20B9e246db5a0d21BF9209E4858Bc9A3ff7A034" ;
 export const categoryMapping = {
