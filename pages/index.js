@@ -1,106 +1,39 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
-import styles from "../styles/Home.module.css";
-import Image from "next/image";
+import { useState, useEffect } from "react";
+import CategoryBanner from "../components/CategoryBanner";
+import FeatureBanner from "../components/FeatureBanner";
+import Hero2Text from "../components/Hero2Text";
+import HeroText from "../components/HeroText";
+import { useContract, useContractRead } from "@thirdweb-dev/react";
+import { bananoSpaceContract } from "../utils";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <h1 className={styles.title}>
-            Welcome to{" "}
-            <span className={styles.gradientText0}>
-              <a
-                href="https://thirdweb.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                thirdweb.
-              </a>
-            </span>
-          </h1>
 
-          <p className={styles.description}>
-            Get started by configuring your desired network in{" "}
-            <code className={styles.code}>src/index.js</code>, then modify the{" "}
-            <code className={styles.code}>src/App.js</code> file!
-          </p>
+    const featuredProject = "1"
+    const [projectData, setProjectData] = useState(null);
+    const { contract: spaceContract } = useContract(bananoSpaceContract);
 
-          <div className={styles.connect}>
-            <ConnectWallet
-              dropdownPosition={{
-                side: "bottom",
-                align: "center",
-              }}
-            />
-          </div>
-        </div>
+    // read project data
+    const { data, isLoading, error } = useContractRead(spaceContract, "getProjects", [[featuredProject]]);
+    useEffect(() => {
+        if (data) {
+            setProjectData(data);
+        }
+    }, [data]);
 
-        <div className={styles.grid}>
-          <a
-            href="https://portal.thirdweb.com/"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/images/portal-preview.png"
-              alt="Placeholder preview of starter"
-              width={300}
-              height={200}
-            />
-            <div className={styles.cardText}>
-              <h2 className={styles.gradientText1}>Portal ➜</h2>
-              <p>
-                Guides, references, and resources that will help you build with
-                thirdweb.
-              </p>
-            </div>
-          </a>
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
-          <a
-            href="https://thirdweb.com/dashboard"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/images/dashboard-preview.png"
-              alt="Placeholder preview of starter"
-              width={300}
-              height={200}
-            />
-            <div className={styles.cardText}>
-              <h2 className={styles.gradientText2}>Dashboard ➜</h2>
-              <p>
-                Deploy, configure, and manage your smart contracts from the
-                dashboard.
-              </p>
-            </div>
-          </a>
+    if (!projectData) {
+        return null; // Or a placeholder component until the data is loaded
+    }
 
-          <a
-            href="https://thirdweb.com/templates"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/images/templates-preview.png"
-              alt="Placeholder preview of templates"
-              width={300}
-              height={200}
-            />
-            <div className={styles.cardText}>
-              <h2 className={styles.gradientText3}>Templates ➜</h2>
-              <p>
-                Discover and clone template projects showcasing thirdweb
-                features.
-              </p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </main>
-  );
+    return (
+        <>
+            <HeroText title={"featured."} position={"left"} />
+            <FeatureBanner projectId={featuredProject} imageUrl={projectData[0][4]} projectName={projectData[0][1]} projectOwner={projectData[0][0]}/>
+            {/* <CategoryBanner /> */}
+            <HeroText title={"welcome.monKey"} position={"left"} description={"What is banano.space?  It's the central hub for all things Banano! Monkeys can post their projects and earn wBAN (and eventually Banano) along the way. Join the Banano Revolution: We're more than a community; we're a movement. Be a part of something bigger and contribute to the world of decentralized fun and freedom."}/>
+        </>
+    );
 }
