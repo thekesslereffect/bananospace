@@ -9,7 +9,7 @@ export default function Home() {
 				<HeroText
 					title={"Build the Future."}
 					description={
-						"Join our team of MonKeys in the fight for a instant and feeless future."
+						"Join our team of MonKeys in the fight for an instant and feeless future."
 					}
 					position={"center"}
 				/>
