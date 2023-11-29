@@ -143,7 +143,11 @@ const Project = () => {
 				imageUrl={projectData[0][4]}
 			/>
 
-			<HeroText title={projectData[0][1]} description={projectData[0][2]} />
+			<HeroText
+				title={projectData[0][1]}
+				description={projectData[0][2]}
+				divider={true}
+			/>
 			<div className="flex flex-row justify-end gap-4">
 				{userAddress == projectData[0][0] ? (
 					<Link

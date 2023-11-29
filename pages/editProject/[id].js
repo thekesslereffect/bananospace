@@ -2,7 +2,12 @@ import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import Button from "../../components/Button";
 import HeroText from "../../components/HeroText";
-import { useAddress, useContract, useContractWrite, useContractRead } from "@thirdweb-dev/react";
+import {
+	useAddress,
+	useContract,
+	useContractWrite,
+	useContractRead,
+} from "@thirdweb-dev/react";
 import {
 	convertToEther,
 	bananoSpaceContract,
@@ -17,20 +22,13 @@ const EditProject = () => {
 	const address = useAddress();
 
 	const [projectData, setProjectData] = useState(null);
-// init contracts
-const { contract: spaceContract } = useContract(bananoSpaceContract);
-
+	// init contracts
+	const { contract: spaceContract } = useContract(bananoSpaceContract);
 
 	// read project data
-	const { data, isLoading} = useContractRead(
-		spaceContract,
-		"getProjects",
-		[[id]]
-	);
-
-	
-
-	
+	const { data, isLoading } = useContractRead(spaceContract, "getProjects", [
+		[id],
+	]);
 
 	const [title, setTitle] = useState("");
 	const [description, setDescription] = useState("");
@@ -42,8 +40,6 @@ const { contract: spaceContract } = useContract(bananoSpaceContract);
 	const [projectCategoryName, setProjectCategoryName] = useState(
 		"Wallets and Payments"
 	);
-
-	
 
 	const { contract } = useContract(bananoSpaceContract);
 	const { mutateAsync: updateProject } = useContractWrite(
@@ -74,22 +70,21 @@ const { contract: spaceContract } = useContract(bananoSpaceContract);
 	};
 
 	useEffect(() => {
-    if (data) {
-        setProjectData(data);
-        console.log(data);
-        setTitle(data[0][1]);
-        setDescription(data[0][2]);
-        setImageLink(data[0][4]);
-        setProjectUrl(data[0][5]);
+		if (data) {
+			setProjectData(data);
+			console.log(data);
+			setTitle(data[0][1]);
+			setDescription(data[0][2]);
+			setImageLink(data[0][4]);
+			setProjectUrl(data[0][5]);
 
-        // Convert the category ID to category name
-        const categoryID = data[0][6];
-        const categoryName = displayCategoryName(categoryID);
-        setProjectCategory(categoryID);
-        setProjectCategoryName(categoryName);
-    }
-}, [data]);
-
+			// Convert the category ID to category name
+			const categoryID = data[0][6];
+			const categoryName = displayCategoryName(categoryID);
+			setProjectCategory(categoryID);
+			setProjectCategoryName(categoryName);
+		}
+	}, [data]);
 
 	if (isLoading) {
 		return <div>Loading...</div>;
@@ -103,14 +98,13 @@ const { contract: spaceContract } = useContract(bananoSpaceContract);
 					description={
 						"Please connect a web3 wallet before creating a project."
 					}
+					divider={true}
 				/>
 			) : (
 				<div>
 					<HeroText
 						title={"update.project"}
-						description={
-							"Need to make changes? It's E Z P Z."
-						}
+						description={"Need to make changes? It's E Z P Z."}
 						className={"text-rose-500"}
 					/>
 					<div className="flex justify-center mb-8">

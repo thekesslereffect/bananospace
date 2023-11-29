@@ -1,14 +1,17 @@
-const Button = ({ label, onClick, className, disabled }) => {
+import Link from 'next/link';
+
+const Button = ({ label, onClick, className, disabled, href }) => {
     return (
-      <button 
-        className={`flex w-full justify-center items-center bg-neutral-900 text-neutral-50 font-bold border rounded-2xl py-3 px-4 hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-lg transition duration-300 ${className}`} 
-        onClick={onClick}
-        disabled={disabled}
-      >
-        {label}
-      </button>
+      <Link href={href || '#'} passHref>
+        <button 
+          className={`flex w-full justify-center text-md items-center bg-neutral-900 text-white font-bold rounded-full py-3 px-6 hover:-translate-y-0.5 hover:shadow-xl transition duration-300 ${className}`} 
+          onClick={onClick}
+          disabled={disabled}
+        >
+          {label}
+        </button>
+      </Link>
     );
-  };
-  
-  export default Button;
-  
+};
+
+export default Button;

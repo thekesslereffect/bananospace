@@ -15,7 +15,7 @@ const ProjectCard = ({
     return (
         <>
             <Link href={`/project/${projectId}`} passHref>
-                <div className="flex flex-col bg-neutral-900 rounded-2xl overflow-clip shadow-xl hover:-translate-y-2 hover:shadow-2xl transition duration-300 cursor-pointer">
+                <div className="flex flex-col bg-neutral-900 rounded-lg overflow-clip shadow-xl hover:-translate-y-2 hover:shadow-2xl transition duration-300 cursor-pointer">
                     <div className="relative w-full h-64">
                         <Image
                             src={projectImage}

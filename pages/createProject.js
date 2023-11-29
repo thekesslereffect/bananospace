@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import Button from "../components/Button";
 import HeroText from "../components/HeroText";
 import { useAddress, useContract, useContractWrite } from "@thirdweb-dev/react";
-import { convertToEther, bananoSpaceContract, categoryMapping, displayCategoryName } from "../utils";
+import {
+	convertToEther,
+	bananoSpaceContract,
+	categoryMapping,
+	displayCategoryName,
+} from "../utils";
 import ProjectCard from "../components/ProjectCard";
 
 const CreateProject = () => {
@@ -12,9 +17,12 @@ const CreateProject = () => {
 	const [description, setDescription] = useState("");
 	const [imageLink, setImageLink] = useState("");
 	const [projectUrl, setProjectUrl] = useState("");
-    const [projectCategory, setProjectCategory] = useState(categoryMapping["Wallets and Payments"]);
-    const [projectCategoryName, setProjectCategoryName] = useState("Wallets and Payments");
-
+	const [projectCategory, setProjectCategory] = useState(
+		categoryMapping["Wallets and Payments"]
+	);
+	const [projectCategoryName, setProjectCategoryName] = useState(
+		"Wallets and Payments"
+	);
 
 	const { contract } = useContract(bananoSpaceContract);
 	const { mutateAsync: createProject, isLoading } = useContractWrite(
@@ -22,12 +30,12 @@ const CreateProject = () => {
 		"createProject"
 	);
 
-    const handleCategoryChange = (e) => {
-        const categoryName = e.target.value;
-        const categoryId = categoryMapping[categoryName];
-        setProjectCategory(categoryId);
-        setProjectCategoryName(categoryName);
-    };
+	const handleCategoryChange = (e) => {
+		const categoryName = e.target.value;
+		const categoryId = categoryMapping[categoryName];
+		setProjectCategory(categoryId);
+		setProjectCategoryName(categoryName);
+	};
 
 	const handleSubmit = async (event) => {
 		event.preventDefault(); // Prevent default form submission behavior
@@ -52,6 +60,7 @@ const CreateProject = () => {
 					description={
 						"Please connect a web3 wallet before creating a project."
 					}
+					divider={true}
 				/>
 			) : (
 				<div>
@@ -79,7 +88,7 @@ const CreateProject = () => {
 										: "https://media.tenor.com/Y2-CjCtRcOcAAAAC/travolta-ban.gif"
 								}
 								projectUrl={projectUrl}
-                                projectCategory={displayCategoryName(projectCategory)}
+								projectCategory={displayCategoryName(projectCategory)}
 							/>
 						</div>
 					</div>
@@ -189,7 +198,7 @@ const CreateProject = () => {
 									<option>Faucets</option>
 									<option>NFTs</option>
 								</optgroup>
-                            
+
 								<optgroup label="Market and Commerce">
 									<option>Marketplaces</option>
 								</optgroup>
@@ -206,8 +215,8 @@ const CreateProject = () => {
 							</select>
 							<div className="mt-8">
 								<input
-                                    className="flex w-full justify-center bg-neutral-900 text-neutral-50 font-bold border rounded-2xl py-3 px-4 cursor-pointer hover:-translate-y-1 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-lg transition duration-300"									
-                                    id="submit"
+									className="flex w-full justify-center bg-neutral-900 text-neutral-50 font-bold border rounded-2xl py-3 px-4 cursor-pointer hover:-translate-y-1 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-lg transition duration-300"
+									id="submit"
 									type="submit"
 									value="create."
 								/>
