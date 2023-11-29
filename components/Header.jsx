@@ -118,7 +118,7 @@ const Header = () => {
 
             {/* Mobile Menu Modal */}
             <div
-                className={`fixed px-2 bottom-0 left-0 w-full transform transition-transform ${
+                className={`fixed z-50 px-2 bottom-0 left-0 w-full transform transition-transform ${
                     isMenuVisible ? 'translate-y-0' : 'translate-y-full'
                 }`}
                 style={{ transition: 'transform 0.3s ease-in-out' }}
@@ -129,18 +129,19 @@ const Header = () => {
                         {"×"}
                         {/* x */}
                     </button>
-                    <Link href={"/projects"} className='hover:bg-neutral-100 px-3 py-2 rounded-full transition duration-300'>Projects</Link>
-                    <Link href={"/faucet"} className='hover:bg-neutral-100 px-3 py-2 rounded-full transition duration-300'>Faucet</Link>
-                    <Link href={"/swap"} className='hover:bg-neutral-100 px-3 py-2 rounded-full transition duration-300'>Swap</Link>
-                    <Link href={"/camo"} className='hover:bg-neutral-100 px-3 py-2 rounded-full transition duration-300'>Camo</Link>
-                    <Link href={"/about"} className='hover:bg-neutral-100 px-3 py-2 rounded-full transition duration-300'>About</Link>
+                    <Link href={"/projects"} onClick={toggleMenu} className='hover:bg-neutral-100 px-3 py-2 rounded-full transition duration-300'>Projects</Link>
+                    <Link href={"/faucet"} onClick={toggleMenu} className='hover:bg-neutral-100 px-3 py-2 rounded-full transition duration-300'>Faucet</Link>
+                    <Link href={"/swap"} onClick={toggleMenu} className='hover:bg-neutral-100 px-3 py-2 rounded-full transition duration-300'>Swap</Link>
+                    <Link href={"/camo"} onClick={toggleMenu} className='hover:bg-neutral-100 px-3 py-2 rounded-full transition duration-300'>Camo</Link>
+                    <Link href={"/about"} onClick={toggleMenu} className='hover:bg-neutral-100 px-3 py-2 rounded-full transition duration-300'>About</Link>
                     <div className="flex mt-4  h-12">
                       <ConnectWallet
                         btnTitle={"Connect"}
                         modalSize={"compact"}
                         welcomeScreen={{ title: "" }}
                         displayBalanceToken={{ 137: "0xe20B9e246db5a0d21BF9209E4858Bc9A3ff7A034"}}
-                        theme={"dark"}             
+                        theme={"dark"}   
+                        className={"connectButton"}           
                     />
                     </div>
                 </div>
