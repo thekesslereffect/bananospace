@@ -11,7 +11,7 @@ const About = () => {
 	return (
 		<>
 			<HeroText title={"About"} divider={true} />
-			<div className="text-3xl font-extrabold mb-8">Don't Trust. Verify.</div>
+			<div className="text-3xl font-extrabold mb-8">Dont Trust. Verify.</div>
 			<div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-lg">
 				<div className="text-3xl font-extrabold">Sources</div>
 
