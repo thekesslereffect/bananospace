@@ -27,3 +27,22 @@ a {
   text-overflow: ellipsis;
   max-height: 4.5em; /* Adjust based on line height and line-clamp */
 }
+
+
+.connectButton {
+  background-color: rgb(23 23 23) !important;
+  border-radius: 9999px !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  font-size: 100% !important;
+  height: 44px !important;
+  padding: 0 25px !important;
+  position: relative !important;
+  text-align: center !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+.connectButton:hover {
+  box-shadow: 0px 16px 20px 0px rgba(23, 23, 23, 0.05) !important;
+  transform: translateY(-0.5px) !important;
+}

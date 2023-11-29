@@ -6,6 +6,7 @@ import Navigation from "./Navigation";
 import Link from "next/link";
 import Image from "next/image";
 
+
 // const Header = () => {
 //   return (
 //     <>
@@ -83,7 +84,8 @@ const Header = () => {
                         modalSize={"compact"}
                         welcomeScreen={{ title: "" }}
                         displayBalanceToken={{ 137: "0xe20B9e246db5a0d21BF9209E4858Bc9A3ff7A034"}}
-                        theme={"dark"}             
+                        theme={"dark"}
+                        className={"connectButton"}          
                     />
                     </div>
             </div>
