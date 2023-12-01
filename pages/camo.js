@@ -244,7 +244,7 @@ const Camo = () => {
 						/>
 					</div>
 				</div>
-				<div>Coming SoonTM</div>
+				<div>How To - Coming SoonTM</div>
 				<p>████priv█cy.lay█r████</p>
 				<div></div>
 			</div>
