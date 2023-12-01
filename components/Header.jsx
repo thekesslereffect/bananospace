@@ -64,7 +64,7 @@ const Header = () => {
                 </div> */}
                 <div className="flex flex-row items-center gap-8">
                 <Link href={'/'} className="flex flex-row font-bold text-lg items-center">
-                  <Image src={'/images/banano-mark.png'} width={"40"} height={"40"} className=""/>
+                  <Image src={'/images/banano-mark.png'} width={"40"} height={"40"} alt={"bslogo"} className=""/>
                 {/* ▲ banano.space */}
                 {/* .space */}
                 {/* × */}
@@ -93,7 +93,7 @@ const Header = () => {
             {/* Mobile View */}
             <div className="md:hidden flex w-full justify-between items-center p-4">
                 <Link href={'/'} className="flex flex-row font-bold text-lg items-center">
-                  <Image src={'/images/banano-mark.png'} width={"40"} height={"40"} className=""/>
+                  <Image src={'/images/banano-mark.png'} width={"40"} height={"40"} alt={"bslogo"} className=""/>
                 {/* ▲ banano.space */}
                 {/* .space */}
                 {/* × */}

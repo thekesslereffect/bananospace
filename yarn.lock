@@ -100,6 +100,13 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@bananocoin/bananojs@^2.10.4":
+  version "2.10.4"
+  resolved "https://registry.npmjs.org/@bananocoin/bananojs/-/bananojs-2.10.4.tgz"
+  integrity sha512-TKnu/mVMfFGgmBJ/RLT5hkzQv8I1A9E36D1bjWCwXA+GUng1+aKM6X5uv9j1wqoeEggdMpZWmSIUNtzSw+Ri0g==
+  dependencies:
+    package "^1.0.1"
+
 "@blocto/sdk@^0.5.4":
   version "0.5.5"
   resolved "https://registry.npmjs.org/@blocto/sdk/-/sdk-0.5.5.tgz"
@@ -3373,6 +3380,11 @@ cross-spawn@^7.0.2, cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
+crypto@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/crypto/-/crypto-1.0.1.tgz"
+  integrity sha512-VxBKmeNcqQdiUQUW2Tzq0t377b54N2bMtXO/qiLa+6eRRmmC4qT3D4OnTGoT/U6O9aklQ/jTwbOtRMTTY8G0Ig==
+
 cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz"
@@ -6161,6 +6173,11 @@ p-try@^2.0.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
+
+package@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/package/-/package-1.0.1.tgz"
+  integrity sha512-g6xZR6CO7okjie83sIRJodgGvaXqymfE5GLhN8N2TmZGShmHc/V23hO/vWbdnuy3D81As3pfovw72gGi42l9qA==
 
 parent-module@^1.0.0:
   version "1.0.1"
