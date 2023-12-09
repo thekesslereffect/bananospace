@@ -15,22 +15,16 @@ const About = () => {
 			<div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-lg">
 				<div className="text-3xl font-extrabold">Sources</div>
 
-				<a href={githubProject} target="_blank">
-					<Button label={"Github"} />
-				</a>
+			
+					<Button label={"Github"} newWindow={true} href={githubProject} />
 
-				<a
-					href={`https://polygonscan.com/address/${bananoSpaceContract}#code`}
-					target="_blank"
-				>
-					<Button label={"banano.space project contract"} />
-				</a>
-				<a
-					href={`https://polygonscan.com/address/${wrappedBananoContract}#code`}
-					target="_blank"
-				>
-					<Button label={"wBAN contract"} />
-				</a>
+
+				
+					<Button label={"banano.space project contract"} newWindow={true} href={`https://polygonscan.com/address/${bananoSpaceContract}#code`}/>
+				
+			
+					<Button label={"wBAN contract"} newWindow={true} 					href={`https://polygonscan.com/address/${wrappedBananoContract}#code`}/>
+				
 			</div>
 
 			<Hero2Text
