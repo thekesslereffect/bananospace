@@ -34,7 +34,7 @@ const Faucet = () => {
 								className="flex w-full bg-neutral-100 rounded-md justify-end items-center py-3 px-3 font-bold gap-4"
             />
 					{/* </div> */}
-					<Button label={"Claim"} onClick={claimBanano}/>
+					<Button label={"Claim"} onClick={claimBanano} className={"bg-neutral-900 text-white "}/>
 					{message && <p>{message}</p>}
 				</div>
         <div>Coming SoonTM</div>

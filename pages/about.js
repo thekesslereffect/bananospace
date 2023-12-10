@@ -16,14 +16,14 @@ const About = () => {
 				<div className="text-3xl font-extrabold">Sources</div>
 
 			
-					<Button label={"Github"} newWindow={true} href={githubProject} />
+					<Button label={"Github"} newWindow={true} href={githubProject} className={"bg-neutral-900 text-white "}/>
 
 
 				
-					<Button label={"banano.space project contract"} newWindow={true} href={`https://polygonscan.com/address/${bananoSpaceContract}#code`}/>
+					<Button label={"banano.space project contract"} newWindow={true} href={`https://polygonscan.com/address/${bananoSpaceContract}#code`} className={"bg-neutral-900 text-white "}/>
 				
 			
-					<Button label={"wBAN contract"} newWindow={true} 					href={`https://polygonscan.com/address/${wrappedBananoContract}#code`}/>
+					<Button label={"wBAN contract"} newWindow={true} 					href={`https://polygonscan.com/address/${wrappedBananoContract}#code`} className={"bg-neutral-900 text-white "}/>
 				
 			</div>
 
@@ -75,7 +75,7 @@ const About = () => {
             It takes a projectId and an amount for inputs. The amount you input is withdrawn from your account and sent directly to the project owner. Any function transferring wBAN will contain the code: IERC20(wBan).transferFrom`}
 				className={"mb-8"}
 			/>
-			<div className={"bg-neutral-900  mb-8 p-8 left-0 right-0 "}>
+			<div className={"bg-neutral-900 mb-8 p-8 left-0 right-0 "}>
 			<Hero2Text
 				title={"fast.feeless.secure"}
 				position={"center"}

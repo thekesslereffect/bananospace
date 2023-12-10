@@ -13,12 +13,12 @@ const Swap = () => {
 						<div>20,000</div>
 						<div>wBAN</div>
 					</div>
-					<Button label={"↓"} className={"w-10 h-10 rounded-full"} />
+					<Button label={"↓"} className={"w-10 h-10 rounded-full bg-neutral-900 text-white "} />
 					<div className="flex w-full bg-neutral-100 rounded-md justify-end items-center py-3 px-3 font-bold gap-4">
 						<div>100</div>
 						<div>BAN</div>
 					</div>
-					<Button label={"Swap"} />
+					<Button label={"Swap"} className={"bg-neutral-900 text-white "}/>
 				</div>
         <div>Coming SoonTM</div>
 

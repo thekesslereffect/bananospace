@@ -167,7 +167,7 @@ const Camo = () => {
 						<Button
 							label={"Generate Random Sender"}
 							onClick={generateRandomSender}
-							className={"my-4"}
+							className={"my-4 bg-neutral-900 text-white "}
 						/>
 						<div>Receiver</div>
 						<div className="flex flex-row gap-4">
@@ -207,7 +207,7 @@ const Camo = () => {
 						<Button
 							label={"Generate Random Receiver"}
 							onClick={generateRandomReceiver}
-							className={"my-4"}
+							className={"my-4 bg-neutral-900 text-white "}
 						/>
 
 						<div>Shared Secret</div>

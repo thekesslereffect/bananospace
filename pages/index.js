@@ -13,7 +13,7 @@ export default function Home() {
 					}
 					position={"center"}
 				/>
-				<Button label={"Let's Go"} className={"w-max"} href={"/projects"} />
+				<Button label={"Let's Go"} className={"w-max bg-neutral-900 text-white "} href={"/projects"} />
 			</div>
 		</>
 	);
