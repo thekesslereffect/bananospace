@@ -1,5 +1,5 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300;400;500;600;700&family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=DynaPuff:wght@400;500;600;700&family=Gluten:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Sniglet:wght@400;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,10 +8,11 @@ html,
 body {
   /* padding: 0; */
   /* margin: 0; */
-  font-family: 'Archivo', sans-serif;
-  /* font-family: 'Arimo', sans-serif; */
-  /* font-family: 'Space Grotesk', sans-serif; */
-  /* font-family: 'Wix Madefor Display', sans-serif; */
+  /* font-family: 'Sniglet', sans-serif; */
+  /* font-family: 'DynaPuff', sans-serif; */
+  /* font-family: 'Nunito', sans-serif; */
+
+
 
 }
 
@@ -30,19 +31,18 @@ a {
 
 
 .connectButton {
-  background-color: rgb(23 23 23) !important;
-  border-radius: 9999px !important;
-  color: #fff !important;
+  background-color: rgba(255,255,255,0) !important;
+  /* border-radius: 9999px !important; */
+  border: 1px solid rgba(255,255,255,0) !important;
+  /* color: #fff !important; */
+  width: max-content;
   cursor: pointer !important;
   font-size: 100% !important;
-  height: 44px !important;
-  padding: 0 25px !important;
+  align-items: center;
+  justify-content: center;
+  /* height: 44px !important; */
+  /* padding: 0 25px !important; */
   position: relative !important;
   text-align: center !important;
-  transition: all 0.15s ease-in-out !important;
-}
-
-.connectButton:hover {
-  box-shadow: 0px 16px 20px 0px rgba(23, 23, 23, 0.05) !important;
-  transform: translateY(-0.5px) !important;
+  /* transition: all 0.15s ease-in-out !important; */
 }

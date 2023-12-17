@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@bananocoin/bananojs": "^2.10.4",
+    "@next/font": "^14.0.4",
+    "@squircle-js/react": "^1.2.0",
     "@thirdweb-dev/react": "^4",
     "@thirdweb-dev/sdk": "^4",
     "crypto": "^1.0.1",

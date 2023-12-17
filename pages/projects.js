@@ -54,7 +54,7 @@ const Projects = () => {
 
 	return (
 		<>
-			<HeroText title={"Projects"} divider={true} />
+			<HeroText title={"Projects"} />
 
 			<FeatureBanner
 				projectId={featuredProject}

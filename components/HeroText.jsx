@@ -1,12 +1,14 @@
 import React from 'react'
+import localFont from '@next/font/local'
+const thickFont = localFont({src: "../pages/fonts/Scrap.ttf"})
 
 const HeroText = ({title, description, position,className, classNameTitle, classNameDescription, divider}) => {
   return (
-    <div className={`mb-8 ${className}`}>
-        <div className={`text-7xl font-semibold w-full mb-4 text-${position || 'left'} ${classNameTitle}`}>
+    <div className={`flex flex-col mb-8  ${className}`}>
+        <div className={` ${thickFont.className}  text-7xl pb-4 w-full mb-4 bg-gradient-to-br from-neutral-600 to-neutral-900 bg-clip-text text-transparent text-${position || 'left'} ${classNameTitle}`}>
             {title}          
         </div>
-        <div className={`text-xl font-medium text-neutral-500 w-full text-${position || 'left'} ${classNameDescription}`}>
+        <div className={`text-xl  text-neutral-600 w-full text-${position || 'left'} ${classNameDescription}`}>
             {description}          
         </div>
         {divider? 

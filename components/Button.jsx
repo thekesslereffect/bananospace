@@ -23,7 +23,7 @@ const Button = ({ label, onClick, className, disabled, href, newWindow }) => {
 
   return (
     <button
-      className={`flex w-full justify-center text-md items-center font-bold rounded-full py-3 px-6 hover:-translate-y-0.5 hover:shadow-xl transition duration-300 ${className}`}
+      className={`flex w-full bg-[rgba(255,255,255,0.08)] backdrop-blur-lg border-transparent border-solid border-[1px] hover:border-[rgba(255,255,255,0.25)] justify-center text-md items-center font-bold rounded-full py-3 px-6 hover:shadow-xl hover:shadow-[rgb(255,255,255,0.05)] transition duration-300 ${className}`}
       onClick={handleClick}
       disabled={disabled}
     >

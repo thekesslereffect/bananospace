@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import HeroText from "../components/HeroText";
 import Button from "../components/Button";
+import ToonButton from "../components/ToonButton";
 
 const Faucet = () => {
 	const [address, setAddress] = useState('');
@@ -21,7 +22,7 @@ const Faucet = () => {
 	return (
 		<>
 			<div>
-				<HeroText title={"Faucet"} divider={true} />
+				<HeroText title={"Faucet"} />
 			</div>
 			<div className="flex flex-col flex-grow justify-center items-center">
 				<div className="flex flex-col w-96  items-center justify-center rounded-lg p-4 gap-4 m-8">
@@ -34,7 +35,7 @@ const Faucet = () => {
 								className="flex w-full bg-neutral-100 rounded-md justify-end items-center py-3 px-3 font-bold gap-4"
             />
 					{/* </div> */}
-					<Button label={"Claim"} onClick={claimBanano} className={"bg-neutral-900 text-white "}/>
+					<ToonButton label={"Claim"} onClick={claimBanano} className={"w-full"}/>
 					{message && <p>{message}</p>}
 				</div>
         <div>Coming SoonTM</div>

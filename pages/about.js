@@ -1,6 +1,7 @@
 import Button from "../components/Button";
 import Hero2Text from "../components/Hero2Text";
 import HeroText from "../components/HeroText";
+import ToonButton from "../components/ToonButton";
 import {
 	bananoSpaceContract,
 	githubProject,
@@ -10,21 +11,34 @@ import {
 const About = () => {
 	return (
 		<>
-			<HeroText title={"About"} divider={true} />
+		<div className="text-neutral-600">
+
+		
+			<HeroText title={"About"} />
 			<div className="text-3xl font-extrabold mb-8">Dont Trust. Verify.</div>
-			<div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-lg">
+			<div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-lg ">
 				<div className="text-3xl font-extrabold">Sources</div>
 
-			
-					<Button label={"Github"} newWindow={true} href={githubProject} className={"bg-neutral-900 text-white "}/>
+				<ToonButton
+					label={"Github"}
+					newWindow={true}
+					href={githubProject}
+					className={"max-w-max"}
+				/>
 
+				<ToonButton
+					label={"banano.space project contract"}
+					newWindow={true}
+					href={`https://polygonscan.com/address/${bananoSpaceContract}#code`}
+					className={"max-w-max"}
+				/>
 
-				
-					<Button label={"banano.space project contract"} newWindow={true} href={`https://polygonscan.com/address/${bananoSpaceContract}#code`} className={"bg-neutral-900 text-white "}/>
-				
-			
-					<Button label={"wBAN contract"} newWindow={true} 					href={`https://polygonscan.com/address/${wrappedBananoContract}#code`} className={"bg-neutral-900 text-white "}/>
-				
+				<ToonButton
+					label={"wBAN contract"}
+					newWindow={true}
+					href={`https://polygonscan.com/address/${wrappedBananoContract}#code`}
+					className={"max-w-max"}
+				/>
 			</div>
 
 			<Hero2Text
@@ -76,18 +90,24 @@ const About = () => {
 				className={"mb-8"}
 			/>
 			<div className={"bg-neutral-900 mb-8 p-8 left-0 right-0 "}>
-			<Hero2Text
-				title={"fast.feeless.secure"}
-				position={"center"}
-				description={
-					"Banano was built upon Nano technology, except it's 8x faster and 8x more energy efficient. Oh, and Banano has its own privacy layer."
-				}
-				className={"text-neutral-50"}
-				
-			/>
-				<Button href={"https://banano.cc/yellowpaper#:~:text=On%20average%2C%20generation%20times%20are%208x%20faster%20for%20BANANO%20than%20for%20NANO%20while%20consuming%208x%20less%20electricity."} label={"Read about it in the Yellow Paper"} className={"bg-white text-neutral-900"} newWindow={true}/>
+				<Hero2Text
+					title={"fast.feeless.secure"}
+					position={"center"}
+					description={
+						"Banano was built upon Nano technology, except it's 8x faster and 8x more energy efficient. Oh, and Banano has its own privacy layer."
+					}
+					className={"text-neutral-50"}
+				/>
+				<Button
+					href={
+						"https://banano.cc/yellowpaper#:~:text=On%20average%2C%20generation%20times%20are%208x%20faster%20for%20BANANO%20than%20for%20NANO%20while%20consuming%208x%20less%20electricity."
+					}
+					label={"Read about it in the Yellow Paper"}
+					className={"bg-white text-neutral-900"}
+					newWindow={true}
+				/>
 			</div>
-			
+			</div>
 		</>
 	);
 };

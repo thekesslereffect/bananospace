@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import HeroText from "../components/HeroText";
 import Button from "../components/Button";
 import bananojs from "@bananocoin/bananojs";
+import ToonButton from "../components/ToonButton";
+import { Squircle } from "@squircle-js/react";
 
 const Camo = () => {
 	const [seed1, setSeed1] = useState("");
@@ -121,16 +123,16 @@ const Camo = () => {
 	return (
 		<>
 			<div>
-				<HeroText title={"Camo"} divider={true} />
+				<HeroText title={"Camo"}  />
 			</div>
 			<div className="flex flex-col w-full items-center">
-				<div className="flex flex-col w-full max-w-lg  bg-gray-200 items-center justify-center rounded-lg p-4 gap-4 m-8">
-					<div className="flex w-full bg-neutral-100 rounded-md justify-end items-center py-3 px-3 font-bold gap-4">
-						<div>█████</div>
-					</div>
-					<div className="font-mono w-full flex flex-col min-w-max">
+
+			<Squircle cornerRadius={32}	cornerSmoothing={0.8} className="-rotate-1 hover:rotate-0 hover:-translate-y-1 hover:scale-105 duration-300  bg-[#1d1c20]  p-8   shadow-[inset_0_20px_40px_-30px_rgba(255,255,255,.5)] ">
+
+				{/* <div className="flex flex-col w-full max-w-lg  bg-[#1d1c20] items-center justify-center rounded-xl p-8 gap-4 m-8 border-[1px] border-[rgba(255,255,255,0.08)]"> */}
+					<div className="w-full flex flex-col min-w-max">
 						<div>Sender</div>
-						<div className="flex flex-row gap-4">
+						<div className="font-mono flex flex-row gap-4">
 							<div>seed</div>
 							<input
 								id="seed1"
@@ -139,10 +141,10 @@ const Camo = () => {
 								onChange={handleSeed1Change}
 								placeholder="Enter seed or Generate Random"
 								type="text"
-								className="flex w-full bg-neutral-900 text-white"
+								className="font-mono flex w-full bg-neutral-900 text-white"
 							/>
 						</div>
-						<div className="flex flex-row gap-4">
+						<div className="font-mono flex flex-row gap-4">
 							<div>ban_</div>
 							<input
 								id="banano1"
@@ -150,10 +152,10 @@ const Camo = () => {
 								defaultValue={banano1}
 								placeholder="...generatedBan"
 								type="text"
-								className="flex w-full"
+								className="flex w-full bg-transparent"
 							/>
 						</div>
-						<div className="flex flex-row gap-4">
+						<div className="font-mono flex flex-row gap-4">
 							<div>camo</div>
 							<input
 								id="camo1"
@@ -161,16 +163,16 @@ const Camo = () => {
 								defaultValue={camo1}
 								placeholder="...generatedCamo"
 								type="text"
-								className="flex w-full"
+								className="flex w-full bg-transparent"
 							/>
 						</div>
-						<Button
+						<ToonButton
 							label={"Generate Random Sender"}
 							onClick={generateRandomSender}
-							className={"my-4 bg-neutral-900 text-white "}
+							className={"my-4"}
 						/>
 						<div>Receiver</div>
-						<div className="flex flex-row gap-4">
+						<div className="font-mono flex flex-row gap-4">
 							<div>seed</div>
 							<input
 								id="seed2"
@@ -182,7 +184,7 @@ const Camo = () => {
 								className="flex w-full bg-neutral-900 text-white"
 							/>
 						</div>
-						<div className="flex flex-row gap-4">
+						<div className="font-mono flex flex-row gap-4">
 							<div>ban_</div>
 							<input
 								id="banano2"
@@ -190,10 +192,10 @@ const Camo = () => {
 								defaultValue={banano2}
 								placeholder="...generatedBan"
 								type="text"
-								className="flex w-full"
+								className="flex w-full bg-transparent"
 							/>
 						</div>
-						<div className="flex flex-row gap-4">
+						<div className="font-mono flex flex-row gap-4">
 							<div>camo</div>
 							<input
 								id="camo2"
@@ -201,53 +203,35 @@ const Camo = () => {
 								defaultValue={camo2}
 								placeholder="...generatedCamo"
 								type="text"
-								className="flex w-full"
+								className="flex w-full bg-transparent"
 							/>
 						</div>
-						<Button
+						<ToonButton
 							label={"Generate Random Receiver"}
 							onClick={generateRandomReceiver}
-							className={"my-4 bg-neutral-900 text-white "}
+							className={"my-4"}
 						/>
 
 						<div>Shared Secret</div>
-						{/* <div className="flex flex-row gap-4">
-							<div>seed</div>
-							<input
-								id="seed3"
-								name="seed3"
-								value={seed3}
-								onChange={handleSeed3Change}
-								placeholder="Enter seed or Generate Random"
-								type="text"
-								className="flex w-full bg-neutral-900 text-white"
-							/>
-						</div>
-						<div className="flex flex-row gap-4">
-							<div>camo</div>
-							<input
-								id="camo3"
-								name="camo3"
-								value={camo3}
-								onChange={handleCamo3Change}
-								placeholder="Enter Reciever Camo or Generate Random"
-								type="text"
-								className="flex w-full bg-neutral-900 text-white"
-							/>
-						</div> */}
 						<input
 							id="sharedSecret"
 							name="sharedSecret"
 							placeholder="...sharedSecret"
 							defaultValue={sharedSecret}
 							type="text"
+							className="font-mono bg-transparent"
 						/>
 					</div>
+				{/* </div> */}
+				<div className="flex flex-col w-full justify-center items-end pt-4">
+					<div>How To - Coming SoonTM</div>
+					<p>████priv█cy.lay█r████</p>
 				</div>
-				<div>How To - Coming SoonTM</div>
-				<p>████priv█cy.lay█r████</p>
-				<div></div>
+				
+				
+				</Squircle>
 			</div>
+			
 		</>
 	);
 };
