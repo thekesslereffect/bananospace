@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
-import { Squircle } from "@squircle-js/react";
 
 const ProjectCard = ({
     projectId,
@@ -18,7 +16,7 @@ const ProjectCard = ({
         
             <Link href={`/project/${projectId}`} passHref>
                 <div className="flex flex-col h-[500px] w-full rounded-3xl  shadow-xl hover:-translate-y-2 hover:shadow-2xl transition duration-300 cursor-pointer">
-                <Squircle cornerRadius={24} cornerSmoothing={1} className="overflow-clip bg-black flex flex-col h-full">
+                <div className="overflow-clip rounded-3xl bg-black flex flex-col h-full">
                     <div className="flex relative w-full h-full">
                         <Image
                             src={projectImage}
@@ -40,7 +38,7 @@ const ProjectCard = ({
                             {projectDonations} wBAN
                         </div>
                     </div>
-                    </Squircle>
+                    </div>
                 </div>
             </Link>
             

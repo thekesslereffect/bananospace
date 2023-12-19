@@ -16,16 +16,10 @@ import localFont from '@next/font/local'
 // const myLocalFont = localFont({src: "fonts/Scrap.ttf"})
 const myLocalFont = localFont({src: "fonts/Candy Beans.otf"})
 
-
-
-
-
-
 // This is the chain your dApp will work on.
 // Change this to the chain your app is built for.
 // You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
 const activeChain = "polygon";
-import { SquircleNoScript } from "@squircle-js/react"
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -39,8 +33,7 @@ function MyApp({ Component, pageProps }) {
 				rainbowWallet(),
 			]}
 		>
-			{/* <div className="relative bg-gradient-to-br from-[#1e1e20] to-[#0e0e11]  text-neutral-50 w-full "> */}
-			<div className="relative bg-gradient-to-br from-gray-100 via-slate-200 to-stone-300  text-neutral-50 w-full ">
+			<div className="relative bg-gradient-to-br from-gray-100 via-slate-200 to-stone-300  text-neutral-50 w-full overflow-clip">
 
 				{/* Background with repeating image */}
 				{/* <div
@@ -51,10 +44,9 @@ function MyApp({ Component, pageProps }) {
 				{/* Content Wrapper */}
 				<div className="relative w-full  ">
 					<div className={myLocalFont.className}>
-					<div className="p-4 flex flex-col min-h-screen w-full items-center">
+					<div className="flex flex-col min-h-screen w-full items-center">
 						<Header />
-						<div className="flex-grow flex flex-col max-w-[97rem] w-full">
-							<SquircleNoScript />
+						<div className="flex-grow flex flex-col max-w-7xl w-full">
 							<Component {...pageProps} />
 						</div>
 						<Footer />

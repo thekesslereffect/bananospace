@@ -6,7 +6,7 @@ const EmptyProjectCard = () => {
     <>
       <Link
         href={"/createProject"}
-        className='flex flex-col items-center justify-center text-neutral-50 text-6xl bg-gray-200  rounded-2xl overflow-clip hover:ring-2 hover:ring-amber-400  hover:text-amber-400 ring-offset-4 transition duration-300'
+        className='flex flex-col items-center justify-center text-neutral-50 text-6xl bg-slate-200  rounded-3xl overflow-clip hover:ring-2 hover:ring-amber-400  hover:text-amber-400 ring-offset-4 transition duration-300'
       >
           +
       </Link>

@@ -127,10 +127,10 @@ const Camo = () => {
 			</div>
 			<div className="flex flex-col w-full items-center">
 
-			<Squircle cornerRadius={32}	cornerSmoothing={0.8} className="-rotate-1 hover:rotate-0 hover:-translate-y-1 hover:scale-105 duration-300  bg-[#1d1c20]  p-8   shadow-[inset_0_20px_40px_-30px_rgba(255,255,255,.5)] ">
+			<div className="rounded-3xl -rotate-1 hover:rotate-0 hover:-translate-y-1 hover:scale-105 duration-300  bg-[#1d1c20]  p-10   shadow-[inset_0_20px_40px_-30px_rgba(255,255,255,.5)] ">
 
 				{/* <div className="flex flex-col w-full max-w-lg  bg-[#1d1c20] items-center justify-center rounded-xl p-8 gap-4 m-8 border-[1px] border-[rgba(255,255,255,0.08)]"> */}
-					<div className="w-full flex flex-col min-w-max">
+					<div className="flex flex-col w-full">
 						<div>Sender</div>
 						<div className="font-mono flex flex-row gap-4">
 							<div>seed</div>
@@ -229,7 +229,7 @@ const Camo = () => {
 				</div>
 				
 				
-				</Squircle>
+				</div>
 			</div>
 			
 		</>
