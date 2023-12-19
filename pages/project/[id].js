@@ -17,6 +17,7 @@ import RedirectButton from "../../components/RedirectButton";
 import FeatureBanner from "../../components/FeatureBanner";
 import HeroText from "../../components/HeroText";
 import Link from "next/link";
+import ToonButton from "../../components/ToonButton";
 
 const Project = () => {
 	const router = useRouter();
@@ -146,23 +147,23 @@ const Project = () => {
 			<HeroText
 				title={projectData[0][1]}
 				description={projectData[0][2]}
-				divider={true}
 			/>
 			<div className="flex flex-row justify-end gap-4">
 				{userAddress == projectData[0][0] ? (
-					<Link
-						href={`/editProject/${id}`}
-						className="text-white rounded-2xl shadow-lg hover:-translate-y-1 hover:shadow-xl transition duration-200 my-4 mb-8 px-8 py-3 font-bold text-xl bg-rose-500 shadow-rose-200 hover:shadow-rose-200"
-					>
-						Edit Project
-					</Link>
+					<ToonButton label={"Edit Project"} color={"red"} href={`/editProject/${id}`}/>
+					// <Link
+					// 	href={`/editProject/${id}`}
+					// 	className="text-white rounded-2xl shadow-lg hover:-translate-y-1 hover:shadow-xl transition duration-200 my-4 mb-8 px-8 py-3 font-bold text-xl bg-rose-500 shadow-rose-200 hover:shadow-rose-200"
+					// >
+					// 	Edit Project
+					// </Link>
 				) : null}
-
-				<RedirectButton
+				<ToonButton label={"Project Site"} color={"yellow"} href={projectData[0][5]}/>
+				{/* <RedirectButton
 					label="Project Site"
 					href={projectData[0][5]}
 					className="my-4 mb-8 px-8 py-3 font-bold text-xl bg-amber-400 shadow-amber-100 hover:shadow-amber-100"
-				/>
+				/> */}
 			</div>
 
 			<div className="flex flex-row w-full justify-between text-xl font-bold my-4 gap-4 items-center">

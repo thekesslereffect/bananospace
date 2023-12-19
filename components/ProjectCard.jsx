@@ -28,12 +28,12 @@ const ProjectCard = ({
                     </div>
                     <div className="flex flex-col h-64 justify-between p-5">
                         <div className="flex flex-col h-28">
-                        <h2 className="text-lg font-bold">{projectName}</h2>
+                        <h2 className="text-lg">{projectName}</h2>
                         <p className="truncate-description">
                             {projectDescription}
                         </p>
                         </div>
-                        <div className="flex justify-between font-bold mt-3 items-center">
+                        <div className="flex justify-between mt-3 items-center">
                             <div className="bg-neutral-100 text-neutral-900 px-2 py-1 rounded-full">{projectCategory}</div>
                             {projectDonations} wBAN
                         </div>

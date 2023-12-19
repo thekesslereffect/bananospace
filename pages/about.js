@@ -1,4 +1,5 @@
 import Button from "../components/Button";
+import Frame from "../components/Frame";
 import Hero2Text from "../components/Hero2Text";
 import HeroText from "../components/HeroText";
 import ToonButton from "../components/ToonButton";
@@ -89,24 +90,27 @@ const About = () => {
             It takes a projectId and an amount for inputs. The amount you input is withdrawn from your account and sent directly to the project owner. Any function transferring wBAN will contain the code: IERC20(wBan).transferFrom`}
 				className={"mb-8"}
 			/>
-			<div className={"bg-neutral-900 mb-8 p-8 left-0 right-0 "}>
-				<Hero2Text
-					title={"fast.feeless.secure"}
-					position={"center"}
-					description={
-						"Banano was built upon Nano technology, except it's 8x faster and 8x more energy efficient. Oh, and Banano has its own privacy layer."
-					}
-					className={"text-neutral-50"}
-				/>
-				<Button
-					href={
-						"https://banano.cc/yellowpaper#:~:text=On%20average%2C%20generation%20times%20are%208x%20faster%20for%20BANANO%20than%20for%20NANO%20while%20consuming%208x%20less%20electricity."
-					}
-					label={"Read about it in the Yellow Paper"}
-					className={"bg-white text-neutral-900"}
-					newWindow={true}
-				/>
-			</div>
+
+				<Frame className={"rotate-1"}>
+					<Hero2Text
+						title={"fast.feeless.secure"}
+						position={"center"}
+						description={
+							"Banano was built upon Nano technology, except it's 8x faster and 8x more energy efficient. Oh, and Banano has its own privacy layer."
+						}
+						className={""}
+					/>
+					<ToonButton
+						href={
+							"https://banano.cc/yellowpaper#:~:text=On%20average%2C%20generation%20times%20are%208x%20faster%20for%20BANANO%20than%20for%20NANO%20while%20consuming%208x%20less%20electricity."
+						}
+						label={"Read about it in the Yellow Paper"}
+						className={"rotate-0"}
+						newWindow={true}
+						color={"yellow"}
+					/>
+				</Frame>
+
 			</div>
 		</>
 	);

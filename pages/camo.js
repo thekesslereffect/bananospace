@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import bananojs from "@bananocoin/bananojs";
 import ToonButton from "../components/ToonButton";
 import { Squircle } from "@squircle-js/react";
+import Frame from "../components/Frame";
 
 const Camo = () => {
 	const [seed1, setSeed1] = useState("");
@@ -125,11 +126,11 @@ const Camo = () => {
 			<div>
 				<HeroText title={"Camo"}  />
 			</div>
-			<div className="flex flex-col w-full items-center">
+			<div className="flex flex-col flex-grow justify-center items-center">
+				<div className="flex flex-col w-full max-w-2xl items-center justify-center rounded-lg p-4 gap-4 m-8">
 
-			<div className="rounded-3xl -rotate-1 hover:rotate-0 hover:-translate-y-1 hover:scale-105 duration-300  bg-[#1d1c20]  p-10   shadow-[inset_0_20px_40px_-30px_rgba(255,255,255,.5)] ">
 
-				{/* <div className="flex flex-col w-full max-w-lg  bg-[#1d1c20] items-center justify-center rounded-xl p-8 gap-4 m-8 border-[1px] border-[rgba(255,255,255,0.08)]"> */}
+				<Frame color={"black"}>
 					<div className="flex flex-col w-full">
 						<div>Sender</div>
 						<div className="font-mono flex flex-row gap-4">
@@ -170,6 +171,7 @@ const Camo = () => {
 							label={"Generate Random Sender"}
 							onClick={generateRandomSender}
 							className={"my-4"}
+							color={"green"}
 						/>
 						<div>Receiver</div>
 						<div className="font-mono flex flex-row gap-4">
@@ -210,6 +212,7 @@ const Camo = () => {
 							label={"Generate Random Receiver"}
 							onClick={generateRandomReceiver}
 							className={"my-4"}
+							color={"green"}
 						/>
 
 						<div>Shared Secret</div>
@@ -229,6 +232,8 @@ const Camo = () => {
 				</div>
 				
 				
+			
+				</Frame>
 				</div>
 			</div>
 			

@@ -32,6 +32,7 @@ const Header = () => {
                     <Link href={"/projects"} className='text-neutral-600 hover:text-neutral-900 transition duration-300'>Projects</Link>
                     <Link href={"/faucet"} className='text-neutral-600 hover:text-neutral-900 transition duration-300'>Faucet</Link>
                     <Link href={"/swap"} className='text-neutral-600 hover:text-neutral-900 transition duration-300'>Swap</Link>
+                    <Link href={"/lotto"} className='text-neutral-600 hover:text-neutral-900 transition duration-300'>Lotto</Link>
                     <Link href={"/camo"} className='text-neutral-600 hover:text-neutral-900 transition duration-300'>Camo</Link>
                     <Link href={"/about"} className='text-neutral-600 hover:text-neutral-900 transition duration-300'>About</Link>
                 </div>

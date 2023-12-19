@@ -15,6 +15,7 @@ import {
 	displayCategoryName,
 } from "../../utils";
 import ProjectCard from "../../components/ProjectCard";
+import ToonButton from "../../components/ToonButton";
 
 const EditProject = () => {
 	const router = useRouter();
@@ -98,7 +99,6 @@ const EditProject = () => {
 					description={
 						"Please connect a web3 wallet before creating a project."
 					}
-					divider={true}
 				/>
 			) : (
 				<div>
@@ -252,6 +252,7 @@ const EditProject = () => {
 								</optgroup>
 							</select>
 							<div className="mt-8">
+								{/* <ToonButton id="submit" type="submit" value="Update" color={"red"} className={"w-full"}/> */}
 								<input
 									className="flex w-full justify-center bg-rose-500 shadow-rose-200 shadow-lg text-neutral-50 font-bold border rounded-2xl py-3 px-4 cursor-pointer hover:-translate-y-1 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-lg transition duration-300"
 									id="submit"
