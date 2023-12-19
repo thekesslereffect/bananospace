@@ -30,7 +30,7 @@ const Faucet = () => {
 				<div className="flex flex-col w-full max-w-md items-center justify-center rounded-lg p-4 gap-4 m-8">
 
 					<div className="flex flex-col gap-8  text-neutral-700 rounded-3xl break-words w-full rotate-1 hover:rotate-0 hover:-translate-y-1 hover:scale-105 duration-300 bg-slate-100 border-8 border-white p-10 shadow-[inset_0_20px_40px_-30px_rgba(255,255,255,.5)] ">
-					<Image src={"/images/coinGrp1.PNG"} width={250} height={250} alt={"faucet_img"} className="absolute self-center -translate-y-48 filter brightness-[1.2]"/>
+					<Image src={"/images/coinGrp1.png"} width={250} height={250} alt={"faucet_img"} className="absolute self-center -translate-y-48 filter brightness-[1.2]"/>
 					<input
                 type="text"
                 value={address}
