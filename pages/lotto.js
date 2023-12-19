@@ -7,9 +7,9 @@ import Frame from "../components/Frame";
 const Lotto = () => {
 	return (
 		<>
-			<div>
-				<HeroText title={"Lotto"} />
-			</div>
+			
+			<HeroText title={"Lotto"} className={"p-4"}/>
+			
 			<div className="flex flex-col flex-grow justify-center items-center">
 				<div className="flex flex-col w-full max-w-md items-center justify-center rounded-lg p-4 gap-4 m-8">
 					<Frame className={""}>

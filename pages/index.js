@@ -9,20 +9,20 @@ import Frame from "../components/Frame";
 export default function Home() {
 	return (
 		<>
-			<div className="relative flex flex-col h-screen -mt-28 justify-center items-center ">
+			<div className="relative flex flex-col h-screen  justify-center items-center ">
 				<Image
 					src={"/images/render1_bottom.png"}
 					height={300}
 					width={300}
 					alt={"monkeybottom_img"}
-					className="absolute z-0 translate-x-[0px] -translate-y-[240px] scale-125 filter brightness-[1.2]"
+					className="absolute z-0 translate-x-[0px] -translate-y-[240px] scale-100 md:scale-125 filter brightness-[1.2]"
 				/>
 				<Image
 					src={"/images/render1_top.png"}
 					height={300}
 					width={300}
 					alt={"monkeytop_img"}
-					className="absolute z-20 translate-x-[0px] -translate-y-[240px] scale-125 filter brightness-[1.2]"
+					className="absolute z-20 translate-x-[0px] -translate-y-[240px] scale-100 md:scale-125 filter brightness-[1.2]"
 				/>
 
 				{/* <Image src={"/images/banano-mark-white.png"} height={200} width={200} className="absolute z-0 rotate-12 -translate-x-[300px] -translate-y-[300px] scale-50 filter brightness-[.2] opacity-10"/>
@@ -51,9 +51,10 @@ export default function Home() {
 					label={"Let's Go!"}
 					href={"/projects"}
 					className={"rotate-3 mt-16"}
+					// color={"blue"}
 				/>
 			</div>
-			<div className="relative max-w-7xl mx-auto w-full">
+			<div className="relative max-w-7xl mx-auto w-full p-4">
 
 				<div className="relative grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 pt-14 mb-8">
 					<Frame color={""} className={"col-span-2 justify-between -rotate-1"}>

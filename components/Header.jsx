@@ -83,7 +83,7 @@ const Header = () => {
                 }`}
                 style={{ transition: 'transform 0.3s ease-in-out' }}
             >
-                <div className="flex flex-col rounded-2xl items-center text-2xl text-neutral-700 duration-300 max-h-[400px] min-h-[400px] border-2 border-white/50 backdrop-blur-sm bg-[#ffffff70]  p-8   col-span-4 shadow-[inset_0_20px_40px_-30px_rgba(255,255,255,.5)] ">
+                <div className="flex flex-col rounded-2xl items-center text-2xl text-neutral-700 duration-300 min-h-[400px] border-2 border-white/50 backdrop-blur-sm bg-[#ffffff70]  p-8   col-span-4 shadow-[inset_0_20px_40px_-30px_rgba(255,255,255,.5)] ">
                 {/* <div className="flex flex-col text-neutral-700 bg-white border shadow-2xl rounded-t-3xl p-4 items-center"> */}
                     <button onClick={toggleMenu} className="flex w-full justify-end mr-4 text-4xl font-semibold">
                         {/* Close Icon */}
@@ -93,6 +93,7 @@ const Header = () => {
                     <Link href={"/projects"} onClick={toggleMenu} className='hover:text-neutral-100 hover:bg-neutral-900 px-3 py-2 rounded-full transition duration-300'>Projects</Link>
                     <Link href={"/faucet"} onClick={toggleMenu} className='hover:text-neutral-100 hover:bg-neutral-900 px-3 py-2 rounded-full transition duration-300'>Faucet</Link>
                     <Link href={"/swap"} onClick={toggleMenu} className='hover:text-neutral-100 hover:bg-neutral-900 px-3 py-2 rounded-full transition duration-300'>Swap</Link>
+                    <Link href={"/lotto"} onClick={toggleMenu} className='hover:text-neutral-100 hover:bg-neutral-900 px-3 py-2 rounded-full transition duration-300'>Lotto</Link>
                     <Link href={"/camo"} onClick={toggleMenu} className='hover:text-neutral-100 hover:bg-neutral-900 px-3 py-2 rounded-full transition duration-300'>Camo</Link>
                     <Link href={"/about"} onClick={toggleMenu} className='hover:text-neutral-100 hover:bg-neutral-900 px-3 py-2 rounded-full transition duration-300'>About</Link>
                     <div className="flex flex-col justify-center items-center shadow-lg shadow-lime-400/30 hover:shadow-xl hover:shadow-lime-300/30 overflow-visible rounded-full hover:rotate-0 hover:scale-105 hover:-translate-y-1   duration-300">

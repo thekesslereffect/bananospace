@@ -54,7 +54,7 @@ const ToonButton = ({ label, onClick, className, disabled, href, newWindow, colo
 
         {/* bg-gradient-to-r from-rose-400 to-orange-300 */}
         {/* shadow-[inset_0_20px_40px_-15px_rgba(255,255,255,1)] */}
-        <div className={`${thickFont.className}`}>{label}</div>
+        <div className={`${thickFont.className} text-lg md:text-2xl`}>{label}</div>
      </div>
       {/* </Squircle> */}
     </button>

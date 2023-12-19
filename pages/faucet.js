@@ -22,9 +22,7 @@ const Faucet = () => {
     };
 	return (
 		<>
-			<div>
-				<HeroText title={"Faucet"} />
-			</div>
+			<HeroText title={"Faucet"} className={"p-4"}/>
 			<div className="flex flex-col flex-grow justify-center items-center">
 				<div className="flex flex-col w-full max-w-md items-center justify-center rounded-lg p-4 gap-4 m-8">
 					<Frame className={"rotate-1"}>

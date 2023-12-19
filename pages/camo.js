@@ -123,13 +123,9 @@ const Camo = () => {
 
 	return (
 		<>
-			<div>
-				<HeroText title={"Camo"}  />
-			</div>
-			<div className="flex flex-col flex-grow justify-center items-center">
+			<HeroText title={"Camo"} className={"p-4"}/>
+			<div className="flex flex-col flex-grow justify-center items-center">		
 				<div className="flex flex-col w-full max-w-2xl items-center justify-center rounded-lg p-4 gap-4 m-8">
-
-
 				<Frame color={"black"}>
 					<div className="flex flex-col w-full">
 						<div>Sender</div>
