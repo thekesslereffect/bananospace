@@ -1,13 +1,12 @@
 import React from "react";
 import { formatAddress } from "../utils";
 import Link from "next/link";
-import { Squircle } from "@squircle-js/react";
 
 const FeatureBanner = ({projectId, projectName, projectOwner, imageUrl}) => {
     return (
         <>
         <Link href={`/project/${projectId}`} className="mb-8">
-        <Squircle cornerRadius={24}	cornerSmoothing={0.8} className="relative w-full h-96 cursor-pointer hover:-translate-y-1 hover:scale-105 duration-300  bg-[#1d1c20]  shadow-[inset_0_20px_40px_-30px_rgba(255,255,255,.5)] ">
+        <div className="relative rounded-3xl w-full h-96 cursor-pointer hover:-translate-y-1 hover:scale-105 duration-300  bg-[#1d1c20]  shadow-[inset_0_20px_40px_-30px_rgba(255,255,255,.5)] ">
 
             {/* <div className="relative w-full h-96 mb-8 cursor-pointer"> */}
                 <img
@@ -31,7 +30,7 @@ const FeatureBanner = ({projectId, projectName, projectOwner, imageUrl}) => {
                 : null}
                 
             {/* </div> */}
-            </Squircle>
+            </div>
         </Link>
             
         </>
